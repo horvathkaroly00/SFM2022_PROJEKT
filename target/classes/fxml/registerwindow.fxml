@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="580.0" styleClass="AnchorPane" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="52.0" layoutY="233.0" text="Felhasználónév" />
+      <Label layoutX="52.0" layoutY="331.0" text="Jelszó" />
+      <Label layoutX="159.0" layoutY="111.0" text="REGISZTRÁCIÓ" textAlignment="CENTER">
+         <font>
+            <Font name="Book Antiqua" size="35.0" />
+         </font>
+      </Label>
+      <Button layoutX="337.0" layoutY="430.0" mnemonicParsing="false" styleClass="logreg" stylesheets="@../styles/style.css" text="Vissza" />
+      <Button layoutX="155.0" layoutY="430.0" mnemonicParsing="false" styleClass="logreg" stylesheets="@../styles/style.css" text="Regisztráció" />
+      <Label layoutX="52.0" layoutY="194.0" text="Kérjük töltse ki az alábbi mezőket!" />
+      <PasswordField layoutX="155.0" layoutY="322.0" prefHeight="37.0" prefWidth="270.0" promptText="Jelszó" />
+      <Label layoutX="52.0" layoutY="283.0" text="E-mail" />
+      <PasswordField layoutX="155.0" layoutY="370.0" prefHeight="37.0" prefWidth="270.0" promptText="Jelszó újra" />
+      <Label layoutX="52.0" layoutY="380.0" text="Jelszó újra" />
+      <ImageView fitHeight="37.0" fitWidth="32.0" layoutX="442.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/name.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="442.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/email.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="442.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pass.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="442.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pass.png" />
+         </image>
+      </ImageView>
+      <Pane prefHeight="45.0" prefWidth="580.0" style="-fx-background-color: #DEC69E;">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="34.0" layoutX="542.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/close.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="472.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/talca.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="512.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/max.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TextField layoutX="155.0" layoutY="223.0" prefHeight="37.0" prefWidth="270.0" promptText="Felhasználónév" />
+      <TextField layoutX="155.0" layoutY="273.0" prefHeight="37.0" prefWidth="270.0" promptText="E-mail" />
+   </children>
+</AnchorPane>
