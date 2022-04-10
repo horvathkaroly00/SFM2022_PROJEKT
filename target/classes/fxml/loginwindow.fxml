@@ -14,7 +14,7 @@
    <children>
       <Label layoutX="60.0" layoutY="281.0" text="Felhasználónév" />
       <Label layoutX="60.0" layoutY="333.0" text="Jelszó" />
-      <Label layoutX="163.0" layoutY="151.0" text="ÜDVÖZÖLJÜK!" textAlignment="CENTER">
+      <Label layoutX="160.0" layoutY="151.0" text="ÜDVÖZÖLJÜK" textAlignment="CENTER">
          <font>
             <Font name="Book Antiqua" size="35.0" />
          </font>
@@ -34,8 +34,37 @@
       </ImageView>
       <Pane fx:id="titlePane" prefHeight="45.0" prefWidth="580.0" style="-fx-background-color: #DEC69E;">
          <children>
-            <Button layoutX="523.0" layoutY="4.0" mnemonicParsing="false" onAction="#btnClose" prefHeight="32.0" prefWidth="42.0" styleClass="ugybutton" text="X" />
-            <Button layoutX="470.0" layoutY="4.0" mnemonicParsing="false" onAction="#btnMinimize" prefHeight="32.0" prefWidth="42.0" styleClass="ugybutton" text="_" />
+            <Button contentDisplay="CENTER" layoutX="540.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnClose" prefHeight="30.0" prefWidth="32.0" styleClass="titlebutton">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="21.0">
+                     <image>
+                        <Image url="@../images/close.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button contentDisplay="BOTTOM" layoutX="505.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnMinimize" prefHeight="30.0" prefWidth="32.0" styleClass="titlebutton">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="21.0">
+                     <image>
+                        <Image url="@../images/icons8_minimize_window_26px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <ImageView layoutX="14.0" layoutY="10.0">
+               <image>
+                  <Image url="@../images/icons8_k_26px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="40.0" layoutY="10.0">
+               <image>
+                  <Image url="@../images/icons8_d_26px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="67.0" layoutY="10.0">
+               <image>
+                  <Image url="@../images/icons8_r_26px_1.png" />
+               </image>
+            </ImageView>
          </children></Pane>
       <TextField layoutX="155.0" layoutY="271.0" prefHeight="37.0" prefWidth="270.0" promptText="Felhasználónév" />
       <PasswordField layoutX="155.0" layoutY="323.0" prefHeight="37.0" prefWidth="270.0" promptText="Jelszó" />

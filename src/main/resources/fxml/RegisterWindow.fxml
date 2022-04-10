@@ -50,8 +50,39 @@
       <TextField layoutX="155.0" layoutY="273.0" prefHeight="37.0" prefWidth="270.0" promptText="E-mail" />
       <Pane fx:id="titlePane" prefHeight="45.0" prefWidth="580.0" style="-fx-background-color: #DEC69E;">
          <children>
-            <Button layoutX="523.0" layoutY="4.0" mnemonicParsing="false" onAction="#btnClose" prefHeight="32.0" prefWidth="42.0" styleClass="ugybutton" text="X" />
-            <Button layoutX="470.0" layoutY="4.0" mnemonicParsing="false" onAction="#btnMinimize" prefHeight="32.0" prefWidth="42.0" styleClass="ugybutton" text="_" />
+            <Button contentDisplay="CENTER" layoutX="540.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnClose" prefHeight="30.0" prefWidth="32.0" styleClass="titlebutton">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="21.0">
+                     <image>
+                        <Image url="@../images/close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="BOTTOM" layoutX="505.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnMinimize" prefHeight="30.0" prefWidth="32.0" styleClass="titlebutton">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="21.0">
+                     <image>
+                        <Image url="@../images/icons8_minimize_window_26px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView layoutX="14.0" layoutY="10.0">
+               <image>
+                  <Image url="@../images/icons8_k_26px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="40.0" layoutY="10.0">
+               <image>
+                  <Image url="@../images/icons8_d_26px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="67.0" layoutY="10.0">
+               <image>
+                  <Image url="@../images/icons8_r_26px_1.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </children>

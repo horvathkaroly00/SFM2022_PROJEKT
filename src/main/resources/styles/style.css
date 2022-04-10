@@ -57,6 +57,25 @@
 	-fx-top:1px;
 }
 
+.titlebutton{
+        -fx-box-shadow:inset 0px 1px 9px -4px #91b8b3;
+    	-fx-background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+    	-fx-background-color: #FFE4B5;
+    	-fx-border-radius:25px;
+    	-fx-border:1px solid #566963;
+    	-fx-display:inline-block;
+    	-fx-cursor:pointer;
+    	-fx-color:#ffffff;
+    	-fx-font-family:Arial;
+    	-fx-text-decoration:none;
+    	-fx-text-shadow:0px 0px 0px #2b665e;
+
+}
+
+.titlebutton:hover {
+	-fx-background:linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
+	-fx-background-color:#ccc2a6;
+    }
 
 .sorszamlabel
 {

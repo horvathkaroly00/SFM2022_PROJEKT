@@ -10,13 +10,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-
-import javax.imageio.IIOParam;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -33,6 +28,7 @@ public class GuiController implements Initializable {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        stage.centerOnScreen();
         stage.getIcons().add(new Image("/images/ikon.png"));
         ((GuiController)fxmlLoader.getController()).init(stage);
         stage.show();
@@ -46,6 +42,7 @@ public class GuiController implements Initializable {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        stage.centerOnScreen();
         stage.getIcons().add(new Image("/images/ikon.png"));
         ((GuiController)fxmlLoader.getController()).init(stage);
         stage.show();
@@ -59,6 +56,7 @@ public class GuiController implements Initializable {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        stage.centerOnScreen();
         stage.getIcons().add(new Image("/images/ikon.png"));
         ((GuiController)fxmlLoader.getController()).init(stage);
         stage.show();

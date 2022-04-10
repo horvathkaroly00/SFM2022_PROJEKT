@@ -1,15 +1,11 @@
 package hu.unideb.inf;
 
 import javafx.application.Application;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.Color;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-
 import java.io.IOException;
 
 public class MainApp extends Application {
@@ -19,15 +15,17 @@ public class MainApp extends Application {
     public void start(Stage stage) throws IOException{
 
             //Parent root = FXMLLoader.load(getClass().getResource("/fxml/LoginWindow.fxml"));
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/LoginWindow.fxml"));
+            FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/LoginWindow.fxml"));
             Scene scene = new Scene(loader.load());
-            scene.setFill(Color.TRANSPARENT);
             stage.setTitle("Login");
+            stage.getIcons().add(new Image("/images/ikon.png"));
             stage.initStyle((StageStyle.TRANSPARENT));
             //stage.setResizable(false);
             stage.setScene(scene);
             ((GuiController)loader.getController()).init(stage);
             stage.show();
+
+
 
     }
 
