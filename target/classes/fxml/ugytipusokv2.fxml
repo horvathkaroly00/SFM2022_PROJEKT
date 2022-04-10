@@ -176,19 +176,19 @@
             </Label>
          </children>
       </HBox>
-      <Pane layoutY="-4.0" prefHeight="45.0" prefWidth="1280.0" style="-fx-background-color: #DEC69E;">
+      <Pane fx:id="titlePane" layoutY="-4.0" prefHeight="45.0" prefWidth="1280.0" style="-fx-background-color: #DEC69E;">
          <children>
-            <ImageView fitHeight="40.0" fitWidth="30.0" layoutX="1238.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="btnClose" fitHeight="40.0" fitWidth="30.0" layoutX="1238.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/close.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1164.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="btnMinimize" fitHeight="30.0" fitWidth="30.0" layoutX="1164.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/talca.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1200.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="btnResize" fitHeight="30.0" fitWidth="30.0" layoutX="1200.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/max.png" />
                </image>
