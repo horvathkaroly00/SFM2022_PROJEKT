@@ -37,6 +37,7 @@ public class GuiController implements Initializable {
 
     }
 
+
     public void switchToLoginWindow(ActionEvent event) throws IOException
     {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/LoginWindow.fxml"));
