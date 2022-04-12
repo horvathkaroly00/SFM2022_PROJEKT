@@ -12,6 +12,8 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+
+import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -29,7 +31,7 @@ public class GuiController implements Initializable {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.centerOnScreen();
-        stage.getIcons().add(new Image("/images/ikon.png"));
+        stage.getIcons().add(new Image("/images/kdr.png"));
         ((GuiController)fxmlLoader.getController()).init(stage);
         stage.show();
 
@@ -43,7 +45,7 @@ public class GuiController implements Initializable {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.centerOnScreen();
-        stage.getIcons().add(new Image("/images/ikon.png"));
+        stage.getIcons().add(new Image("/images/kdr.png"));
         ((GuiController)fxmlLoader.getController()).init(stage);
         stage.show();
 
@@ -57,7 +59,7 @@ public class GuiController implements Initializable {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.centerOnScreen();
-        stage.getIcons().add(new Image("/images/ikon.png"));
+        stage.getIcons().add(new Image("/images/kdr.png"));
         ((GuiController)fxmlLoader.getController()).init(stage);
         stage.show();
 
@@ -100,11 +102,11 @@ public class GuiController implements Initializable {
 
 
     @FXML
-    private Button btn_okt,btn_okm,btn_gep,btn_vall,btn_ege,login,register;
+    private Button btn_okt,btn_okm,btn_gep,btn_vall,btn_ege,login,register, btn_pult;
 
 
     @FXML
-    private Pane pnl_okt,pnl_okm,pnl_gep,pnl_vall,pnl_ege;
+    private Pane pnl_okt,pnl_okm,pnl_gep,pnl_vall,pnl_ege, pnl_pult, pnl_def;
 
     @FXML
     private void handleButtonAction(ActionEvent event)
@@ -128,6 +130,50 @@ public class GuiController implements Initializable {
         else if(event.getSource() == btn_ege)
         {
             pnl_ege.toFront();
+        }
+        else if(event.getSource() == btn_pult)
+        {
+            pnl_pult.toFront();
+        }
+
+    }
+
+    @FXML
+    private Label pultLabel;
+    @FXML
+    private boolean isShow = true;
+    public void changMode(ActionEvent event)
+    {
+        isShow = !isShow;
+        if (isShow) {
+            hide(event);
+
+        }
+        else
+        {
+            show(event);
+        }
+
+    }
+
+    private void show(ActionEvent event) {
+        if(event.getSource() == btn_pult)
+        {
+            pnl_pult.toFront();
+            btn_pult.setText("Váltás ügyek nézetre");
+
+
+
+
+        }
+    }
+
+    private void hide(ActionEvent event) {
+        if(event.getSource() == btn_pult)
+        {
+            pnl_pult.toBack();
+            btn_pult.setText("Váltás pult nézetre");
+
         }
     }
 

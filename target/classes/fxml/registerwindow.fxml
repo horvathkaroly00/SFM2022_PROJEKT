@@ -10,22 +10,22 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="580.0" styleClass="AnchorPane" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.GuiController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="580.0" styleClass="ancsorpane" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.GuiController">
    <children>
-      <Label layoutX="52.0" layoutY="233.0" text="Felhasználónév" />
-      <Label layoutX="52.0" layoutY="331.0" text="Jelszó" />
-      <Label layoutX="159.0" layoutY="111.0" text="REGISZTRÁCIÓ" textAlignment="CENTER">
+      <Label layoutX="52.0" layoutY="233.0" styleClass="infoLabel" text="Felhasználónév" />
+      <Label layoutX="52.0" layoutY="331.0" styleClass="infoLabel" text="Jelszó" />
+      <Label layoutX="159.0" layoutY="111.0" styleClass="bigLabel" text="REGISZTRÁCIÓ" textAlignment="CENTER">
          <font>
             <Font name="Book Antiqua" size="35.0" />
          </font>
       </Label>
-      <Button layoutX="337.0" layoutY="430.0" mnemonicParsing="false" onAction="#switchToLoginWindow" styleClass="logreg" stylesheets="@../styles/style.css" text="Vissza" />
-      <Button layoutX="155.0" layoutY="430.0" mnemonicParsing="false" onAction="#switchToLoginWindow" styleClass="logreg" stylesheets="@../styles/style.css" text="Regisztráció" />
-      <Label layoutX="52.0" layoutY="194.0" text="Kérjük töltse ki az alábbi mezőket!" />
+      <Button layoutX="344.0" layoutY="430.0" mnemonicParsing="false" onAction="#switchToLoginWindow" styleClass="logreg" stylesheets="@../styles/style.css" text="Vissza" />
+      <Button layoutX="159.0" layoutY="430.0" mnemonicParsing="false" onAction="#switchToLoginWindow" styleClass="logreg" stylesheets="@../styles/style.css" text="Regisztráció" />
+      <Label layoutX="52.0" layoutY="175.0" styleClass="infoLabel" text="Kérjük töltse ki az alábbi mezőket!" />
       <PasswordField layoutX="155.0" layoutY="322.0" prefHeight="37.0" prefWidth="270.0" promptText="Jelszó" />
-      <Label layoutX="52.0" layoutY="283.0" text="E-mail" />
+      <Label layoutX="52.0" layoutY="283.0" styleClass="infoLabel" text="E-mail" />
       <PasswordField layoutX="155.0" layoutY="370.0" prefHeight="37.0" prefWidth="270.0" promptText="Jelszó újra" />
-      <Label layoutX="52.0" layoutY="380.0" text="Jelszó újra" />
+      <Label layoutX="52.0" layoutY="380.0" styleClass="infoLabel" text="Jelszó újra" />
       <ImageView fitHeight="37.0" fitWidth="32.0" layoutX="442.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/name.png" />

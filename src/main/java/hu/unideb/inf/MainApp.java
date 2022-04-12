@@ -18,7 +18,7 @@ public class MainApp extends Application {
             FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/LoginWindow.fxml"));
             Scene scene = new Scene(loader.load());
             stage.setTitle("Login");
-            stage.getIcons().add(new Image("/images/ikon.png"));
+            stage.getIcons().add(new Image("/images/kdr.png"));
             stage.initStyle((StageStyle.TRANSPARENT));
             //stage.setResizable(false);
             stage.setScene(scene);

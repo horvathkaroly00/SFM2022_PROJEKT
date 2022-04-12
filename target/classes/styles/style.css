@@ -1,7 +1,44 @@
-.AnchorPane{
-	-fx-background-color: 	#ffe4b5
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+
+.pane{
+    -fx-background-radius: 30px;
+    -fx-background-radius: 30px;
+    -fx-background-color:  #DEC69E;
+    -fx-background-width: 635;
+    -fx-background-height: 500;
+}
+
+.ancsorpane{
+	-fx-background-color: 	#ffe4b5;
+	-fx-border-radius: 100px 100px 100px 100px;
+
 
 	}
+
+.mainwindowlabels{
+    -fx-font-family: Bebas Neue , cursive;
+        -fx-font-size: 20px;
+        -fx-font-weight: bold;
+        -fx-color: #AAAAA7;
+}
+
+
+.bigLabel {
+    -fx-font-family: Bebas Neue , cursive;
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-color: #AAAAA7;
+}
+
+.infoLabel {
+    -fx-font-family: Bebas Neue , cursive;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-font-color: #AAAAA7;
+}
 
 .ugybutton {
 	-fx-box-shadow:inset 0px 1px 9px -4px #91b8b3;
@@ -12,7 +49,7 @@
 	-fx-display:inline-block;
 	-fx-cursor:pointer;
 	-fx-color:#ffffff;
-	-fx-font-family:Arial;
+	-fx-font-family: Bebas Neue , cursive;
 	-fx-font-size:12px;
 	-fx-font-weight:bold;
 	-fx-padding:11px 23px;
@@ -36,12 +73,12 @@
 	-fx-box-shadow: 0px 1px 0px 0px #1c1b18;
 	-fx-background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
 	-fx-background-color:#eae0c2;
-	-fx-border-radius:15px;
+	-fx-background-radius:30px;
 	-fx-border:2px solid #333029;
 	-fx-display:inline-block;
 	-fx-cursor:pointer;
 	-fx-color:#ffffff;
-	-fx-font-family:Arial;
+	-fx-font-family: Bebas Neue , cursive;
 	-fx-font-size:14px;
 	-fx-font-weight:bold;
 	-fx-padding:12px 16px;
@@ -66,7 +103,7 @@
     	-fx-display:inline-block;
     	-fx-cursor:pointer;
     	-fx-color:#ffffff;
-    	-fx-font-family:Arial;
+    	-fx-font-family: Bebas Neue , cursive;
     	-fx-text-decoration:none;
     	-fx-text-shadow:0px 0px 0px #2b665e;
 
@@ -81,7 +118,9 @@
 {
     -fx-background-color:#eae0c2;
     -fx-border:2px solid #333029;
-    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+    -fx-font-family: Bebas Neue , cursive;
+
 
 }
 
@@ -94,7 +133,7 @@
 	-fx-display:inline-block;
 	-fx-cursor:pointer;
 	-fx-color:#ffffff;
-	-fx-font-family:Arial;
+	-fx-font-family: Bebas Neue , cursive;
 	-fx-font-size:12px;
 	-fx-font-weight:bold;
 	-fx-padding:11px 23px;
