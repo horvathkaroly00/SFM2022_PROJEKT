@@ -28,37 +28,37 @@
          <children>
             <Pane fx:id="pnl_okt" prefHeight="500.0" prefWidth="635.0" styleClass="pane">
                <children>
-                  <Button fx:id="btn_diakhitel" layoutX="224.0" layoutY="91.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Diákhitel" />
-                  <Button fx:id="btn_nyelvv" layoutX="224.0" layoutY="193.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Nyelvvizsga" />
-                  <Button fx:id="btn_erett" layoutX="224.0" layoutY="298.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Érettségi" />
+                  <Button layoutX="224.0" layoutY="91.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Diákhitel" />
+                  <Button layoutX="224.0" layoutY="193.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Nyelvvizsga" />
+                  <Button layoutX="224.0" layoutY="298.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Érettségi" />
                </children>
             </Pane>
             <Pane fx:id="pnl_okm" prefHeight="500.0" prefWidth="635.0" styleClass="pane">
                <children>
-                  <Button fx:id="btn_diakhitel1" layoutX="224.0" layoutY="91.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Jogosítvány" />
-                  <Button fx:id="btn_nyelvv1" layoutX="224.0" layoutY="193.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Diákigazolvány" />
-                  <Button fx:id="btn_erett1" layoutX="224.0" layoutY="298.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Személyigazolvány" />
+                  <Button layoutX="224.0" layoutY="91.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Jogosítvány" />
+                  <Button layoutX="224.0" layoutY="193.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Diákigazolvány" />
+                  <Button layoutX="224.0" layoutY="298.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Személyigazolvány" />
                </children>
             </Pane>
             <Pane fx:id="pnl_gep" prefHeight="500.0" prefWidth="635.0" styleClass="pane">
                <children>
-                  <Button fx:id="btn_diakhitel2" layoutX="224.0" layoutY="91.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Kötelező biztosítás" />
-                  <Button fx:id="btn_nyelvv2" layoutX="224.0" layoutY="193.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Átírás" />
-                  <Button fx:id="btn_erett2" layoutX="224.0" layoutY="298.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Eredetiségvizsga" />
+                  <Button layoutX="224.0" layoutY="91.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Kötelező biztosítás" />
+                  <Button layoutX="224.0" layoutY="193.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Átírás" />
+                  <Button layoutX="224.0" layoutY="298.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Eredetiségvizsga" />
                </children>
             </Pane>
             <Pane fx:id="pnl_ege" prefHeight="500.0" prefWidth="635.0" styleClass="pane">
                <children>
-                  <Button fx:id="btn_diakhitel4" layoutX="224.0" layoutY="91.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Egészségbiztosítás" />
-                  <Button fx:id="btn_nyelvv4" layoutX="224.0" layoutY="193.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="EESZT" />
-                  <Button fx:id="btn_erett4" layoutX="224.0" layoutY="298.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Védettségi igazolvány" />
+                  <Button layoutX="224.0" layoutY="91.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Egészségbiztosítás" />
+                  <Button layoutX="224.0" layoutY="193.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="EESZT" />
+                  <Button layoutX="224.0" layoutY="298.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="187.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Védettségi igazolvány" />
                </children>
             </Pane>
             <Pane fx:id="pnl_vall" prefHeight="500.0" prefWidth="635.0" styleClass="pane">
                <children>
-                  <Button fx:id="btn_diakhitel3" layoutX="224.0" layoutY="91.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="199.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Egyéni vállalkozás" />
-                  <Button fx:id="btn_nyelvv3" layoutX="224.0" layoutY="193.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="199.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Cég működtetés" />
-                  <Button fx:id="btn_erett3" layoutX="224.0" layoutY="298.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="199.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Munkavállalói bejelentés" />
+                  <Button layoutX="224.0" layoutY="91.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="199.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Egyéni vállalkozás" />
+                  <Button layoutX="224.0" layoutY="193.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="199.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Cég működtetés" />
+                  <Button layoutX="224.0" layoutY="298.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="199.0" styleClass="albutton" stylesheets="@../styles/style.css" text="Munkavállalói bejelentés" />
                </children>
             </Pane>
             <Pane fx:id="pnl_def" prefHeight="500.0" prefWidth="635.0" styleClass="pane">
@@ -169,7 +169,6 @@
             </Label>
             <Label layoutX="107.0" layoutY="303.0" prefHeight="17.0" prefWidth="180.0" />
             <TextField layoutX="112.0" layoutY="299.0" />
-            <TextField layoutX="112.0" layoutY="183.0" />
             <Button fx:id="btn_pult" layoutX="102.0" layoutY="362.0" mnemonicParsing="false" onAction="#changMode" prefHeight="44.0" prefWidth="169.0" styleClass="albutton" text="Váltás pult nézetre" />
          </children></Pane>
       <Pane fx:id="titlePane" layoutX="-1.0" layoutY="-7.0" prefHeight="45.0" prefWidth="1280.0" style="-fx-background-color: #DEC69E;">

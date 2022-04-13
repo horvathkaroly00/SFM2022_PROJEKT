@@ -13,6 +13,7 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
@@ -65,6 +66,20 @@ public class GuiController implements Initializable {
 
     }
 
+    public void switchToRegister2Window(ActionEvent event) throws IOException
+    {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/RegisterWindow2.fxml"));
+        Parent root = (Parent) fxmlLoader.load();
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.centerOnScreen();
+        stage.getIcons().add(new Image("/images/kdr.png"));
+        ((GuiController)fxmlLoader.getController()).init(stage);
+        stage.show();
+
+    }
+
 
 
 
@@ -101,12 +116,13 @@ public class GuiController implements Initializable {
 
 
 
+
     @FXML
-    private Button btn_okt,btn_okm,btn_gep,btn_vall,btn_ege,login,register, btn_pult;
+    private Button btn_okt,btn_okm,btn_gep,btn_vall,btn_ege,login,register, btn_pult, btn_diakhitel;
 
 
     @FXML
-    private Pane pnl_okt,pnl_okm,pnl_gep,pnl_vall,pnl_ege, pnl_pult, pnl_def;
+    private Pane pnl_okt,pnl_okm,pnl_gep,pnl_vall,pnl_ege, pnl_pult,pnl_def;
 
     @FXML
     private void handleButtonAction(ActionEvent event)
@@ -136,10 +152,11 @@ public class GuiController implements Initializable {
             pnl_pult.toFront();
         }
 
+
+
     }
 
-    @FXML
-    private Label pultLabel;
+
     @FXML
     private boolean isShow = true;
     public void changMode(ActionEvent event)
@@ -177,6 +194,17 @@ public class GuiController implements Initializable {
         }
     }
 
+   /*@FXML
+    private TextField sorszam;
+    private Button btn_diakhitel;
+    public void sorszamKiiras(ActionEvent event)
+    {
+        if (event.getSource() == btn_diakhitel)
+        {
+            sorszam.setText("random szam");
+        }
+    }
+*/
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
