@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="connections">
+    <connection type="Azure.SqlServer:Jetbrains.IJModule" envPrefix="AZURE_SQLSERVER">
+      <resource type="Azure.SqlServer">48cd8d9f4270971ee1f17ab0a3662ba3</resource>
+      <consumer type="Jetbrains.IJModule">sfm_projekt</consumer>
+    </connection>
+    <connection type="Azure.Storage:Jetbrains.IJModule" envPrefix="AZURE_STORAGE">
+      <resource type="Azure.Storage">5babd09ae624650ec17b905b2d47bde9</resource>
+      <consumer type="Jetbrains.IJModule">sfm_projekt</consumer>
+    </connection>
+  </component>
+</project>

@@ -12,42 +12,42 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="580.0" styleClass="ancsorpane" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.GuiController">
    <children>
-      <Label layoutX="37.0" layoutY="267.0" prefHeight="7.0" prefWidth="92.0" styleClass="infoLabel" text="Felhasználónév" />
-      <Label layoutX="37.0" layoutY="365.0" styleClass="infoLabel" text="Jelszó" />
-      <Label layoutX="158.0" layoutY="144.0" styleClass="bigLabel" text="REGISZTRÁCIÓ" textAlignment="CENTER">
+      <Label layoutX="30.0" layoutY="233.0" styleClass="infoLabel" text="Felhasználónév" />
+      <Label layoutX="30.0" layoutY="331.0" styleClass="infoLabel" text="Jelszó" />
+      <Label layoutX="159.0" layoutY="111.0" styleClass="bigLabel" text="REGISZTRÁCIÓ" textAlignment="CENTER">
          <font>
             <Font name="Book Antiqua" size="35.0" />
          </font>
       </Label>
-      <Button layoutX="250.0" layoutY="515.0" mnemonicParsing="false" onAction="#switchToLoginWindow" styleClass="logreg" stylesheets="@../styles/style.css" text="Vissza" />
-      <Button layoutX="150.0" layoutY="456.0" mnemonicParsing="false" onAction="#switchToRegister2Window" styleClass="logreg" stylesheets="@../styles/style.css" text="Tovább a személyes adatok megadásához" />
-      <Label layoutX="37.0" layoutY="209.0" styleClass="infoLabel" text="Kérjük töltse ki az alábbi mezőket!" />
-      <PasswordField layoutX="156.0" layoutY="355.0" prefHeight="37.0" prefWidth="270.0" promptText="Jelszó" />
-      <Label layoutX="37.0" layoutY="316.0" styleClass="infoLabel" text="E-mail" />
-      <PasswordField layoutX="155.0" layoutY="405.0" prefHeight="37.0" prefWidth="270.0" promptText="Jelszó újra" />
-      <Label layoutX="37.0" layoutY="415.0" styleClass="infoLabel" text="Jelszó újra" />
-      <ImageView fitHeight="37.0" fitWidth="32.0" layoutX="442.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
+      <Button layoutX="250.0" layoutY="494.0" mnemonicParsing="false" onAction="#switchToLoginWindow" styleClass="logreg" stylesheets="@../styles/style.css" text="Vissza" />
+      <Button layoutX="150.0" layoutY="430.0" mnemonicParsing="false" onAction="#switchToRegisterWindow2" styleClass="logreg" stylesheets="@../styles/style.css" text="Tovább a személyes adatok megadásához" />
+      <Label layoutX="30.0" layoutY="175.0" styleClass="infoLabel" text="Kérjük töltse ki az alábbi mezőket!" />
+      <PasswordField layoutX="155.0" layoutY="322.0" prefHeight="37.0" prefWidth="270.0" promptText="Jelszó" />
+      <Label layoutX="30.0" layoutY="283.0" styleClass="infoLabel" text="E-mail" />
+      <PasswordField layoutX="155.0" layoutY="370.0" prefHeight="37.0" prefWidth="270.0" promptText="Jelszó újra" />
+      <Label layoutX="30.0" layoutY="380.0" styleClass="infoLabel" text="Jelszó újra" />
+      <ImageView fitHeight="37.0" fitWidth="32.0" layoutX="442.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/name.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="442.0" layoutY="309.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="442.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/email.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="442.0" layoutY="358.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="442.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/pass.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="442.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="442.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/pass.png" />
          </image>
       </ImageView>
-      <TextField layoutX="155.0" layoutY="257.0" prefHeight="37.0" prefWidth="270.0" promptText="Felhasználónév" />
-      <TextField layoutX="155.0" layoutY="306.0" prefHeight="37.0" prefWidth="270.0" promptText="E-mail" />
+      <TextField layoutX="155.0" layoutY="223.0" prefHeight="37.0" prefWidth="270.0" promptText="Felhasználónév" />
+      <TextField layoutX="155.0" layoutY="273.0" prefHeight="37.0" prefWidth="270.0" promptText="E-mail" />
       <Pane fx:id="titlePane" prefHeight="45.0" prefWidth="580.0" style="-fx-background-color: #DEC69E;">
          <children>
             <Button contentDisplay="CENTER" layoutX="540.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnClose" prefHeight="30.0" prefWidth="32.0" styleClass="titlebutton">
@@ -85,10 +85,5 @@
             </ImageView>
          </children>
       </Pane>
-      <ImageView fitHeight="91.0" fitWidth="174.0" layoutX="245.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/kdr.png" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>
