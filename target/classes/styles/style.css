@@ -63,10 +63,14 @@
 	-fx-background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
 	-fx-background-color:gray;
 }
-.ugybutton:active {
-	-fx-position:relative;
-	-fx-top:1px;
+
+.sorszamKiiras{
+	-fx-font-family: Bebas Neue , cursive;
+	-fx-font-weight: bold;
+	-fx-font-size: 30px;
+
 }
+
 
 
 .albutton {
@@ -89,10 +93,7 @@
 	-fx-background:linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
 	-fx-background-color:#ccc2a6;
 }
-.albutton:active {
-	-fx-position:relative;
-	-fx-top:1px;
-}
+
 
 .titlebutton{
         -fx-box-shadow:inset 0px 1px 9px -4px #91b8b3;
@@ -147,10 +148,7 @@
 	-fx-background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
 	-fx-background-color:gray;
 }
-.logreg:active {
-	-fx-position:relative;
-	-fx-top:1px;
-}
+
 
 .textarea{
     -fx-linear:center;
