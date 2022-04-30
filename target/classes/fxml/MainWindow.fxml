@@ -18,7 +18,7 @@
    <children>
       <Pane fx:id="pnl_pult" layoutX="248.0" layoutY="38.0" prefHeight="628.0" prefWidth="635.0" styleClass="ancsorpane">
          <children>
-            <Label layoutX="172.0" layoutY="38.0" prefHeight="78.0" prefWidth="263.0" styleClass="bigLabel" text="Pultok" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="169.0" layoutY="50.0" prefHeight="58.0" prefWidth="292.0" styleClass="bigLabel" text="PULTOK" />
             <GridPane layoutY="145.0" prefHeight="483.0" prefWidth="635.0" styleClass="pane">
               <columnConstraints>
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -214,9 +214,9 @@
                   </ImageView>
                </graphic>
             </Button>
-            <ImageView fitHeight="210.0" fitWidth="209.0" layoutY="-23.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/download.png" />
+                  <Image url="@../images/kdr.png" />
                </image>
             </ImageView>
          </children>
@@ -241,11 +241,16 @@
             </Label>
          </children>
       </HBox>
-      <HBox layoutY="687.0" prefHeight="26.0" prefWidth="1280.0" style="-fx-background-color: #DEC69E;">
+      <HBox layoutY="687.0" prefHeight="36.0" prefWidth="1280.0" style="-fx-background-color: #DEC69E;">
          <children>
-            <Label alignment="CENTER" prefHeight="14.0" prefWidth="63.0" text="Verzió 0.0.1">
+            <Label alignment="CENTER" prefHeight="14.0" prefWidth="63.0" text="Verzió 0.0.2">
                <HBox.margin>
-                  <Insets left="70.0" top="20.0" />
+                  <Insets left="70.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="261.0" text="© 2022 - 2022 KDR Team - All Rights Reserved.">
+               <HBox.margin>
+                  <Insets left="800.0" top="10.0" />
                </HBox.margin>
             </Label>
          </children>

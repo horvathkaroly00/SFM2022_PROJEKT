@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="580.0" styleClass="ancsorpane" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.GuiController">
+   <children>
+      <Pane fx:id="titlePane" prefHeight="45.0" prefWidth="590.0" style="-fx-background-color: #DEC69E;">
+         <children>
+            <Button contentDisplay="CENTER" layoutX="540.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnClose" prefHeight="30.0" prefWidth="36.0" styleClass="titlebutton">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="21.0">
+                     <image>
+                        <Image url="@../images/close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="BOTTOM" layoutX="505.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnMinimize" prefHeight="30.0" prefWidth="32.0" styleClass="titlebutton">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="21.0">
+                     <image>
+                        <Image url="@../images/icons8_minimize_window_26px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView layoutX="14.0" layoutY="10.0">
+               <image>
+                  <Image url="@../images/icons8_k_26px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="40.0" layoutY="10.0">
+               <image>
+                  <Image url="@../images/icons8_d_26px_1.png" />
+               </image>
+            </ImageView>
+            <ImageView layoutX="67.0" layoutY="10.0">
+               <image>
+                  <Image url="@../images/icons8_r_26px_1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane fx:id="pnl_register2" layoutY="45.0" prefHeight="564.0" prefWidth="590.0" style="-fx-background-color: #ffe4b5;">
+         <children>
+            <Label layoutX="30.0" layoutY="210.0" styleClass="infoLabel" text="Teljes név" />
+            <Label layoutX="30.0" layoutY="256.0" styleClass="infoLabel" text="Születési dátum" />
+            <Label layoutX="30.0" layoutY="302.0" styleClass="infoLabel" text="Személyigazolvány" />
+            <Label layoutX="30.0" layoutY="348.0" styleClass="infoLabel" text="Lakcímkártya" />
+            <Label layoutX="30.0" layoutY="394.0" styleClass="infoLabel" text="TAJ-kártya" />
+            <Label layoutX="150.0" layoutY="93.0" styleClass="bigLabel" text="REGISZTRÁCIÓ" textAlignment="CENTER">
+               <font>
+                  <Font name="Book Antiqua" size="35.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_register1" layoutX="250.0" layoutY="502.0" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="logreg" stylesheets="@../styles/style.css" text="Vissza" />
+            <Button fx:id="btn_veglegesit" layoutX="150.0" layoutY="443.0" mnemonicParsing="false" onAction="#register" prefHeight="39.0" prefWidth="281.0" styleClass="logreg" stylesheets="@../styles/style.css" text="Regisztráció véglegesítése" />
+            <Label layoutX="30.0" layoutY="160.0" styleClass="infoLabel" text="Kérjük töltse ki az alábbi mezőket!" />
+            <ImageView fitHeight="37.0" fitWidth="32.0" layoutX="437.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/name.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="437.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/eletkor.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="437.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/id.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="437.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/home.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="437.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/korhaz.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="teljesnevTextField" layoutX="155.0" layoutY="200.0" prefHeight="37.0" prefWidth="270.0" promptText="Teljes név" />
+            <TextField fx:id="szuldatumTextField" layoutX="155.0" layoutY="246.0" prefHeight="37.0" prefWidth="270.0" promptText="éééé.hh.nn" />
+            <TextField fx:id="szemelyiTextField" layoutX="155.0" layoutY="292.0" prefHeight="37.0" prefWidth="270.0" promptText="Személyigazolvány száma" />
+            <TextField fx:id="lakcimTextField" layoutX="155.0" layoutY="338.0" prefHeight="37.0" prefWidth="270.0" promptText="Lakcímkártya száma" />
+            <TextField fx:id="tajTextField" layoutX="155.0" layoutY="384.0" prefHeight="37.0" prefWidth="270.0" promptText="TAJ-kártya száma" />
+            <ImageView fitHeight="93.0" fitWidth="96.0" layoutX="237.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/kdr.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutY="45.0" prefHeight="564.0" prefWidth="590.0" style="-fx-background-color: #ffe4b5;">
+         <children>
+            <Label layoutX="30.0" layoutY="210.0" styleClass="infoLabel" text="Felhasználónév" />
+            <Label layoutX="30.0" layoutY="348.0" styleClass="infoLabel" text="Jelszó" />
+            <Label layoutX="150.0" layoutY="93.0" styleClass="bigLabel" text="REGISZTRÁCIÓ" textAlignment="CENTER">
+               <font>
+                  <Font name="Book Antiqua" size="35.0" />
+               </font>
+            </Label>
+            <Button layoutX="250.0" layoutY="502.0" mnemonicParsing="false" onAction="#switchToLoginWindow" styleClass="logreg" stylesheets="@../styles/style.css" text="Vissza" />
+            <Button fx:id="btn_register2" layoutX="150.0" layoutY="443.0" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="logreg" stylesheets="@../styles/style.css" text="Tovább a személyes adatok megadásához" />
+            <Label layoutX="30.0" layoutY="160.0" styleClass="infoLabel" text="Kérjük töltse ki az alábbi mezőket!" />
+            <Label layoutX="30.0" layoutY="256.0" styleClass="infoLabel" text="E-mail" />
+            <Label layoutX="30.0" layoutY="394.0" styleClass="infoLabel" text="Jelszó újra" />
+            <ImageView fitHeight="37.0" fitWidth="32.0" layoutX="437.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/name.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="437.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/email.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="437.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/pass.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="437.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/pass.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="usernameRegisterField" layoutX="155.0" layoutY="200.0" prefHeight="37.0" prefWidth="270.0" promptText="Felhasználónév" />
+            <TextField fx:id="emailTextField" layoutX="155.0" layoutY="246.0" prefHeight="37.0" prefWidth="270.0" promptText="E-mail" />
+            <TextField fx:id="emailUjraTextField" layoutX="155.0" layoutY="292.0" prefHeight="37.0" prefWidth="270.0" promptText="E-mail újra" />
+            <PasswordField fx:id="passwordRegisterField" layoutX="155.0" layoutY="338.0" prefHeight="37.0" prefWidth="270.0" promptText="Jelszó" />
+            <PasswordField fx:id="passwordUjraRegisterField" layoutX="155.0" layoutY="384.0" prefHeight="37.0" prefWidth="270.0" promptText="Jelszó újra" />
+            <Label layoutX="30.0" layoutY="302.0" styleClass="infoLabel" text="E-mail újra" />
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="437.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/email.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="93.0" fitWidth="96.0" layoutX="237.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/kdr.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
