@@ -11,8 +11,8 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="580.0" styleClass="ancsorpane" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.GuiController">
    <children>
-      <Label layoutX="30.0" layoutY="233.0" styleClass="infoLabel" text="Életkor" />
-      <Label layoutX="30.0" layoutY="331.0" styleClass="infoLabel" text="Lakcímkártya" />
+      <Label layoutX="30.0" layoutY="233.0" styleClass="infoLabel" text="Teljes név" />
+      <Label layoutX="30.0" layoutY="333.0" styleClass="infoLabel" text="Lakcímkártya" />
       <Label layoutX="159.0" layoutY="111.0" styleClass="bigLabel" text="REGISZTRÁCIÓ" textAlignment="CENTER">
          <font>
             <Font name="Book Antiqua" size="35.0" />
@@ -21,7 +21,7 @@
       <Button layoutX="193.0" layoutY="485.0" mnemonicParsing="false" onAction="#switchToLoginWindow" styleClass="logreg" stylesheets="@../styles/style.css" text="Regisztráció véglegesítése" />
       <Label layoutX="30.0" layoutY="175.0" styleClass="infoLabel" text="Kérjük töltse ki az alábbi mezőket!" />
       <Label layoutX="30.0" layoutY="283.0" styleClass="infoLabel" text="Személyigazolvány" />
-      <Label layoutX="30.0" layoutY="380.0" styleClass="infoLabel" text="Jogosítvány" />
+      <Label layoutX="30.0" layoutY="383.0" styleClass="infoLabel" text="Jogosítvány" />
       <ImageView fitHeight="37.0" fitWidth="32.0" layoutX="442.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/eletkor.png" />
@@ -42,7 +42,7 @@
             <Image url="@../images/jogsi.png" />
          </image>
       </ImageView>
-      <TextField layoutX="155.0" layoutY="223.0" prefHeight="37.0" prefWidth="270.0" promptText="Életkor" />
+      <TextField layoutX="155.0" layoutY="223.0" prefHeight="37.0" prefWidth="270.0" promptText="Teljes név" />
       <TextField layoutX="155.0" layoutY="273.0" prefHeight="37.0" prefWidth="270.0" promptText="Személyigazolvány száma" />
       <Pane fx:id="titlePane" prefHeight="45.0" prefWidth="580.0" style="-fx-background-color: #DEC69E;">
          <children>
@@ -81,10 +81,10 @@
             </ImageView>
          </children>
       </Pane>
-      <TextField layoutX="155.0" layoutY="322.0" prefHeight="37.0" prefWidth="270.0" promptText="Lakcímkártya száma" />
-      <TextField layoutX="155.0" layoutY="371.0" prefHeight="37.0" prefWidth="270.0" promptText="Jogosítvány száma" />
-      <TextField layoutX="155.0" layoutY="422.0" prefHeight="37.0" prefWidth="270.0" promptText="Diákigazolvány száma" />
-      <Label layoutX="30.0" layoutY="432.0" styleClass="infoLabel" text="Diákigazolvány" />
+      <TextField layoutX="155.0" layoutY="323.0" prefHeight="37.0" prefWidth="270.0" promptText="Lakcímkártya száma" />
+      <TextField layoutX="155.0" layoutY="373.0" prefHeight="37.0" prefWidth="270.0" promptText="Jogosítvány száma" />
+      <TextField layoutX="155.0" layoutY="423.0" prefHeight="37.0" prefWidth="270.0" promptText="Diákigazolvány száma" />
+      <Label layoutX="30.0" layoutY="433.0" styleClass="infoLabel" text="Diákigazolvány" />
       <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="442.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/diaki.png" />

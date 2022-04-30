@@ -12,6 +12,8 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.stage.Window;
+
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
@@ -27,7 +29,7 @@ public class GuiController implements Initializable {
     private Scene scene;
 
     public void switchToRegisterWindow(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/RegisterWindow.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/RegisterWindowV2.fxml"));
         Parent root = (Parent) fxmlLoader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -39,7 +41,7 @@ public class GuiController implements Initializable {
 
     }
 
-    public void switchToRegisterWindow2(ActionEvent event) throws IOException {
+    /*public void switchToRegisterWindow2(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/RegisterWindow2.fxml"));
         Parent root = (Parent) fxmlLoader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -51,6 +53,8 @@ public class GuiController implements Initializable {
         stage.show();
 
     }
+
+     */
 
 
     public void switchToLoginWindow(ActionEvent event) throws IOException {
@@ -101,11 +105,11 @@ public class GuiController implements Initializable {
 
 
     @FXML
-    private Button btn_okt, btn_okm, btn_gep, btn_vall, btn_ege, btn_pult;
+    private Button btn_okt, btn_okm, btn_gep, btn_vall, btn_ege, btn_pult, btn_register2, btn_register1;
     @FXML
     private GridPane pnl_okt, pnl_okm, pnl_gep, pnl_vall, pnl_ege;
     @FXML
-    private Pane pnl_pult;
+    private Pane pnl_pult, pnl_register2;
 
 
     @FXML
@@ -123,7 +127,10 @@ public class GuiController implements Initializable {
             pnl_ege.toFront();
         } else if (event.getSource() == btn_pult) {
             pnl_pult.toFront();
-
+        }else if(event.getSource() == btn_register2) {
+            pnl_register2.toFront();
+        } else if (event.getSource() == btn_register1) {
+            pnl_register2.toBack();
         }
 
     }
@@ -159,7 +166,7 @@ public class GuiController implements Initializable {
     @FXML
     Label ugyLabel, sorszamLabel;
     @FXML
-    Button diakhitelButton, nyelvvButton, erettButton, jogsiButton, diakButton, szemelyButton, biztButton, atirButton, eredetButton;
+    Button diakhitelButton, nyelvvButton, erettButton, jogsiButton, diakButton, szemelyButton, biztButton, atirButton, eredetButton, btn_veglegesit;
     @FXML
     Button egeszsButton, eesztButton, vedettButton, vallButton, cegButton, munkaButton;
     public void display (ActionEvent event)
@@ -216,7 +223,7 @@ public class GuiController implements Initializable {
         }
 
     }
-
+    //login
     @FXML
     private TextField usernameField;
     @FXML
@@ -244,8 +251,95 @@ public class GuiController implements Initializable {
             stage.show();
         }
     }
+    //register
+    @FXML
+    private TextField usernameRegisterField, teljesnevTextField, szemelyiTextField, lakcimTextField, szuldatumTextField, emailTextField, tajTextField,emailUjraTextField;
+    @FXML
+    private PasswordField passwordRegisterField, passwordUjraRegisterField;
+    @FXML
+    public void register(ActionEvent event) throws SQLException {
+
+        Window owner = btn_veglegesit.getScene().getWindow();
+
+        if (usernameRegisterField.getText().isEmpty()) {
+            showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
+                    "id hianyzik");
+            return;
+        }
+
+        if (emailTextField.getText().isEmpty()) {
+            showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
+                    "email hianyzik");
+            return;
+        }
+        if (emailUjraTextField.getText().isEmpty()) {
+            showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
+                    "ujra email hianyzik");
+            return;
+        }
+        if (passwordRegisterField.getText().isEmpty()) {
+            showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
+                    "jelszo hianyzik");
+            return;
+        }
+        if (passwordUjraRegisterField.getText().isEmpty()) {
+            showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
+                    "ujra jelszo hianyzik");
+            return;
+        }
+        if (teljesnevTextField.getText().isEmpty()) {
+            showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
+                    "teljes nev hianyzik");
+            return;
+        }
+        if (szemelyiTextField.getText().isEmpty()) {
+            showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
+                    "szemelyi hianyzik");
+            return;
+        }
+        if (lakcimTextField.getText().isEmpty()) {
+            showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
+                    "lakcimkartya hianyzik");
+            return;
+        }
+        if (szuldatumTextField.getText().isEmpty()) {
+            showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
+                    "szuletesi datum hianyzik");
+            return;
+        }
+        if (tajTextField.getText().isEmpty()) {
+            showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
+                    "taj hianyzik");
+            return;
+        }
+
+        String username = usernameRegisterField.getText();
+        String userpassword = passwordRegisterField.getText();
+        String email = emailTextField.getText();
+        String ujraemail = emailUjraTextField.getText();
+        String ujrapassword = passwordUjraRegisterField.getText();
+        String teljesnev = teljesnevTextField.getText();
+        String szemelyigazolvany = szemelyiTextField.getText();
+        String lakcimkartya = lakcimTextField.getText();
+        String szuldatum = szuldatumTextField.getText();
+        String tajkartya = tajTextField.getText();
 
 
+        Database database = new Database();
+        database.insertRecord(username,userpassword, email, teljesnev,szuldatum, szemelyigazolvany,lakcimkartya,tajkartya);
+
+        showAlert(Alert.AlertType.CONFIRMATION, owner, "sikeres",
+                "Welcome " + usernameRegisterField.getText());
+    }
+
+    private static void showAlert(Alert.AlertType alertType, Window owner, String title, String message) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.initOwner(owner);
+        alert.show();
+    }
 
     @Override
     public void initialize (URL url, ResourceBundle resourceBundle){

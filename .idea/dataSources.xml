@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="tesztadatbazis@tesztadatbazis.database.windows.net" uuid="2ce88549-e148-4ce5-abd6-11839a22742c">
+    <data-source source="LOCAL" name="sfmadatbazis@sfmadatbazis.database.windows.net" uuid="f4c6c433-6734-418d-a31d-dd1c40f4e4a1">
       <driver-ref>azure.ms</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://tesztadatbazis.database.windows.net:1433;database=tesztadatbazis</jdbc-url>
+      <jdbc-url>jdbc:sqlserver://sfmadatbazis.database.windows.net:1433;database=sfmadatbazis</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

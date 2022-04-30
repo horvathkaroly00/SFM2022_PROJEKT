@@ -10,12 +10,13 @@ import java.sql.SQLException;
 public class Database {
 
     // Replace below database url, username and password with your actual database credentials
-    private static final String DATABASE_URL = "jdbc:sqlserver://tesztadatbazis.database.windows.net:1433;database=tesztadatbazis";
-    private static final String DATABASE_USERNAME = "TesztUser";
-    private static final String DATABASE_PASSWORD = "Teszt123";
-    private static final String SELECT_QUERY = "SELECT * FROM users WHERE username = ? and password = ?";
+    private static final String DATABASE_URL = "jdbc:sqlserver://sfmadatbazis.database.windows.net:1433;database=sfmadatbazis";
+    private static final String DATABASE_USERNAME = "Kdr123";
+    private static final String DATABASE_PASSWORD = "Kdrteam123";
+    private static final String SELECT_QUERY = "SELECT * FROM users WHERE username = ? and userpassword = ?";
+    private static final String INSERT_QUERY = "INSERT INTO users (username,userpassword,email,teljesnev,szuldatum,szemelyigazolvany,lakcimkartya,tajkartya ) VALUES (?, ?, ?, ?, ?,?, ?, ?)";
 
-    public boolean validate(String username, String password) throws SQLException {
+    public boolean validate(String username, String userpassword) throws SQLException {
 
         // Step 1: Establishing a Connection and
         // try-with-resource statement will auto close the connection.
@@ -25,7 +26,8 @@ public class Database {
              // Step 2:Create a statement using connection object
              PreparedStatement preparedStatement = connection.prepareStatement(SELECT_QUERY)) {
             preparedStatement.setString(1, username);
-            preparedStatement.setString(2, password);
+            preparedStatement.setString(2, userpassword);
+
 
             System.out.println(preparedStatement);
 
@@ -36,10 +38,37 @@ public class Database {
 
 
         } catch (SQLException e) {
-            // print SQL exception information
+            // print SQL exception information++
             printSQLException(e);
         }
         return false;
+    }
+
+    public void insertRecord(String username, String email, String userpassword,String teljesnev, String szuldatum, String szemelyigazolvany,String lakcimkartya,String tajkartya) throws SQLException {
+
+        // Step 1: Establishing a Connection and
+        // try-with-resource statement will auto close the connection.
+        try (Connection connection = DriverManager
+                .getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
+
+             // Step 2:Create a statement using connection object
+             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_QUERY)) {
+            preparedStatement.setString(1, username);
+            preparedStatement.setString(2, userpassword);
+            preparedStatement.setString(3, email);
+            preparedStatement.setString(4, teljesnev);
+            preparedStatement.setString(5, szuldatum);
+            preparedStatement.setString(6, szemelyigazolvany);
+            preparedStatement.setString(7, lakcimkartya);
+            preparedStatement.setString(8, tajkartya);
+
+            System.out.println(preparedStatement);
+            // Step 3: Execute the query or update query
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            // print SQL exception information
+            printSQLException(e);
+        }
     }
 
     public static void printSQLException(SQLException ex) {
