@@ -64,27 +64,27 @@
             <Button fx:id="btn_register1" layoutX="250.0" layoutY="502.0" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="logreg" stylesheets="@../styles/style.css" text="Vissza" />
             <Button fx:id="btn_veglegesit" layoutX="150.0" layoutY="443.0" mnemonicParsing="false" onAction="#register" prefHeight="39.0" prefWidth="281.0" styleClass="logreg" stylesheets="@../styles/style.css" text="Regisztráció véglegesítése" />
             <Label layoutX="30.0" layoutY="160.0" styleClass="infoLabel" text="Kérjük töltse ki az alábbi mezőket!" />
-            <ImageView fitHeight="37.0" fitWidth="32.0" layoutX="437.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="37.0" fitWidth="32.0" layoutX="428.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/name.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="437.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="428.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/eletkor.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="437.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="428.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/id.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="437.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="428.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/home.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="437.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="428.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/korhaz.png" />
                </image>
@@ -99,12 +99,18 @@
                   <Image url="@../images/kdr.png" />
                </image>
             </ImageView>
+            <Label text="Label" />
+            <Label fx:id="usernameErrorLabel1" layoutX="469.0" layoutY="200.0" prefHeight="32.0" prefWidth="120.0" text="Ez a felhasználónév &#10;már létezik!" />
+            <Label fx:id="emailErrorLabel1" layoutX="469.0" layoutY="246.0" prefHeight="32.0" prefWidth="120.0" text="Ez a felhasználónév &#10;már létezik!" />
+            <Label fx:id="passwordErrorLabel1" layoutX="469.0" layoutY="292.0" prefHeight="32.0" prefWidth="120.0" text="Ez a felhasználónév &#10;már létezik!" />
+            <Label fx:id="passwordujraErrorLabel1" layoutX="469.0" layoutY="338.0" prefHeight="32.0" prefWidth="120.0" text="Ez a felhasználónév &#10;már létezik!" />
+            <Label fx:id="usernameErrorLabel11" layoutX="469.0" layoutY="384.0" prefHeight="32.0" prefWidth="120.0" text="Ez a felhasználónév &#10;már létezik!" />
          </children>
       </Pane>
       <Pane layoutY="45.0" prefHeight="564.0" prefWidth="590.0" style="-fx-background-color: #ffe4b5;">
          <children>
             <Label layoutX="30.0" layoutY="210.0" styleClass="infoLabel" text="Felhasználónév" />
-            <Label layoutX="30.0" layoutY="348.0" styleClass="infoLabel" text="Jelszó" />
+            <Label layoutX="31.0" layoutY="303.0" styleClass="infoLabel" text="Jelszó" />
             <Label layoutX="150.0" layoutY="93.0" styleClass="bigLabel" text="REGISZTRÁCIÓ" textAlignment="CENTER">
                <font>
                   <Font name="Book Antiqua" size="35.0" />
@@ -114,34 +120,27 @@
             <Button fx:id="btn_register2" layoutX="150.0" layoutY="443.0" mnemonicParsing="false" onAction="#handleButtonAction" styleClass="logreg" stylesheets="@../styles/style.css" text="Tovább a személyes adatok megadásához" />
             <Label layoutX="30.0" layoutY="160.0" styleClass="infoLabel" text="Kérjük töltse ki az alábbi mezőket!" />
             <Label layoutX="30.0" layoutY="256.0" styleClass="infoLabel" text="E-mail" />
-            <Label layoutX="30.0" layoutY="394.0" styleClass="infoLabel" text="Jelszó újra" />
-            <ImageView fitHeight="37.0" fitWidth="32.0" layoutX="437.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+            <Label layoutX="30.0" layoutY="349.0" styleClass="infoLabel" text="Jelszó újra" />
+            <ImageView fitHeight="37.0" fitWidth="32.0" layoutX="428.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/name.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="437.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/email.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="437.0" layoutY="387.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="428.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/pass.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="437.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="428.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/pass.png" />
                </image>
             </ImageView>
             <TextField fx:id="usernameRegisterField" layoutX="155.0" layoutY="200.0" prefHeight="37.0" prefWidth="270.0" promptText="Felhasználónév" />
             <TextField fx:id="emailTextField" layoutX="155.0" layoutY="246.0" prefHeight="37.0" prefWidth="270.0" promptText="E-mail" />
-            <TextField fx:id="emailUjraTextField" layoutX="155.0" layoutY="292.0" prefHeight="37.0" prefWidth="270.0" promptText="E-mail újra" />
-            <PasswordField fx:id="passwordRegisterField" layoutX="155.0" layoutY="338.0" prefHeight="37.0" prefWidth="270.0" promptText="Jelszó" />
-            <PasswordField fx:id="passwordUjraRegisterField" layoutX="155.0" layoutY="384.0" prefHeight="37.0" prefWidth="270.0" promptText="Jelszó újra" />
-            <Label layoutX="30.0" layoutY="302.0" styleClass="infoLabel" text="E-mail újra" />
-            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="437.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+            <PasswordField fx:id="passwordRegisterField" layoutX="155.0" layoutY="293.0" prefHeight="37.0" prefWidth="270.0" promptText="Jelszó" />
+            <PasswordField fx:id="passwordUjraRegisterField" layoutX="155.0" layoutY="339.0" prefHeight="37.0" prefWidth="270.0" promptText="Jelszó újra" />
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="428.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/email.png" />
                </image>
@@ -151,6 +150,10 @@
                   <Image url="@../images/kdr.png" />
                </image>
             </ImageView>
+            <Label fx:id="usernameErrorLabel" layoutX="469.0" layoutY="203.0" prefHeight="32.0" prefWidth="120.0" text="Ez a felhasználónév &#10;már létezik!" />
+            <Label fx:id="emailErrorLabel" layoutX="469.0" layoutY="246.0" prefHeight="32.0" prefWidth="120.0" text="Ez a felhasználónév &#10;már létezik!" />
+            <Label fx:id="passwordErrorLabel" layoutX="469.0" layoutY="293.0" prefHeight="32.0" prefWidth="120.0" text="Ez a felhasználónév &#10;már létezik!" />
+            <Label fx:id="passwordujraErrorLabel" layoutX="469.0" layoutY="339.0" prefHeight="32.0" prefWidth="120.0" text="Ez a felhasználónév &#10;már létezik!" />
          </children>
       </Pane>
    </children>

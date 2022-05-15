@@ -69,10 +69,6 @@ public class GuiController implements Initializable {
         stage.show();
 
     }
-
-
-
-
     @FXML
     private Pane titlePane;
 
@@ -107,9 +103,9 @@ public class GuiController implements Initializable {
     @FXML
     private Button btn_okt, btn_okm, btn_gep, btn_vall, btn_ege, btn_pult, btn_register2, btn_register1;
     @FXML
-    private GridPane pnl_okt, pnl_okm, pnl_gep, pnl_vall, pnl_ege;
+    private GridPane pnl_okt, pnl_okm, pnl_gep, pnl_vall, pnl_ege, pnl_pult, pnl_default;
     @FXML
-    private Pane pnl_pult, pnl_register2;
+    private Pane pnl_register2;
 
 
     @FXML
@@ -134,7 +130,7 @@ public class GuiController implements Initializable {
         }
 
     }
-
+/*
     @FXML
     private boolean isShow = true;
     public void changMode (ActionEvent event)
@@ -149,22 +145,26 @@ public class GuiController implements Initializable {
 
     }
 
-    private void show (ActionEvent event){
-        if (event.getSource() == btn_pult) {
-            pnl_pult.toFront();
-            btn_pult.setText("Váltás ügyek nézetre");
+        private void show (ActionEvent event){
+            if (event.getSource() == btn_pult) {
+                pnl_pult.toFront();
+                hboxLabel.setText("PULTOK");
+            }
         }
-    }
 
+ */
+
+    @FXML
     private void hide (ActionEvent event){
         if (event.getSource() == btn_pult) {
             pnl_pult.toBack();
-            btn_pult.setText("Váltás pult nézetre");
+            hboxLabel.setText("ÜGYTÍPUSOK");
         }
     }
 
+
     @FXML
-    Label ugyLabel, sorszamLabel;
+    Label ugyLabel, sorszamLabel, hboxLabel;
     @FXML
     Button diakhitelButton, nyelvvButton, erettButton, jogsiButton, diakButton, szemelyButton, biztButton, atirButton, eredetButton, btn_veglegesit;
     @FXML
@@ -176,48 +176,78 @@ public class GuiController implements Initializable {
         n += 1;
 
         if (event.getSource() == diakhitelButton) {
+            hboxLabel.setText("SORSZÁM");
+            pnl_pult.toFront();
             ugyLabel.setText(diakhitelButton.getText());
             sorszamLabel.setText(Integer.toString(n));
         } else if (event.getSource() == nyelvvButton) {
+            hboxLabel.setText("SORSZÁM");
+            pnl_pult.toFront();
             ugyLabel.setText(nyelvvButton.getText());
             sorszamLabel.setText(Integer.toString(n));
         } else if (event.getSource() == erettButton) {
+            hboxLabel.setText("SORSZÁM");
+            pnl_pult.toFront();
             ugyLabel.setText(erettButton.getText());
             sorszamLabel.setText(Integer.toString(n));
         } else if (event.getSource() == jogsiButton) {
+            hboxLabel.setText("SORSZÁM");
+            pnl_pult.toFront();
             ugyLabel.setText(jogsiButton.getText());
             sorszamLabel.setText(Integer.toString(n));
         } else if (event.getSource() == diakButton) {
+            hboxLabel.setText("SORSZÁM");
+            pnl_pult.toFront();
             ugyLabel.setText(diakButton.getText());
             sorszamLabel.setText(Integer.toString(n));
         } else if (event.getSource() == szemelyButton) {
+            hboxLabel.setText("SORSZÁM");
+            pnl_pult.toFront();
             ugyLabel.setText(szemelyButton.getText());
             sorszamLabel.setText(Integer.toString(n));
         } else if (event.getSource() == biztButton) {
+            hboxLabel.setText("SORSZÁM");
+            pnl_pult.toFront();
             ugyLabel.setText(biztButton.getText());
             sorszamLabel.setText(Integer.toString(n));
         } else if (event.getSource() == atirButton) {
+            hboxLabel.setText("SORSZÁM");
+            pnl_pult.toFront();
             ugyLabel.setText(atirButton.getText());
             sorszamLabel.setText(Integer.toString(n));
         } else if (event.getSource() == eredetButton) {
+            hboxLabel.setText("SORSZÁM");
+            pnl_pult.toFront();
             ugyLabel.setText(eredetButton.getText());
             sorszamLabel.setText(Integer.toString(n));
         } else if (event.getSource() == egeszsButton) {
+            hboxLabel.setText("SORSZÁM");
+            pnl_pult.toFront();
             ugyLabel.setText(egeszsButton.getText());
             sorszamLabel.setText(Integer.toString(n));
         } else if (event.getSource() == eesztButton) {
+            hboxLabel.setText("SORSZÁM");
+            pnl_pult.toFront();
             ugyLabel.setText(eesztButton.getText());
             sorszamLabel.setText(Integer.toString(n));
         } else if (event.getSource() == vedettButton) {
+            hboxLabel.setText("SORSZÁM");
+            pnl_pult.toFront();
             ugyLabel.setText(vedettButton.getText());
             sorszamLabel.setText(Integer.toString(n));
         } else if (event.getSource() == vallButton) {
+            hboxLabel.setText("SORSZÁM");
+            pnl_pult.toFront();
             ugyLabel.setText(vallButton.getText());
             sorszamLabel.setText(Integer.toString(n));
         } else if (event.getSource() == cegButton) {
+            hboxLabel.setText("SORSZÁM");
+            pnl_pult.toFront();
             ugyLabel.setText(cegButton.getText());
             sorszamLabel.setText(Integer.toString(n));
         } else if (event.getSource() == munkaButton) {
+            hboxLabel.setText("SORSZÁM");
+            pnl_pult.toFront();
             ugyLabel.setText(munkaButton.getText());
             sorszamLabel.setText(Integer.toString(n));
         }
@@ -238,9 +268,9 @@ public class GuiController implements Initializable {
         boolean flag = database.validate(username, password);
 
         if (!flag) {
-            loginInfoLabel.setText("Hibas adatok");
+            loginInfoLabel.setText("Hibás felhasználónév vagy jelszó!");
         } else {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/MainWindow.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/MainWindow2.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
@@ -252,6 +282,9 @@ public class GuiController implements Initializable {
         }
     }
     //register
+    @FXML
+    private Label birthdateErrorLabel, emailErrorLabel, fullnameErrorLabel, lakcimkartyaErrorLabel, passwordErrorLabel,  passwordujraErrorLabel;
+    private Label szemelyiErrorLabel, tajErrorLabel, usernameErrorLabel;
     @FXML
     private TextField usernameRegisterField, teljesnevTextField, szemelyiTextField, lakcimTextField, szuldatumTextField, emailTextField, tajTextField,emailUjraTextField;
     @FXML
@@ -266,7 +299,6 @@ public class GuiController implements Initializable {
                     "id hianyzik");
             return;
         }
-
         if (emailTextField.getText().isEmpty()) {
             showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
                     "email hianyzik");
@@ -316,8 +348,6 @@ public class GuiController implements Initializable {
         String username = usernameRegisterField.getText();
         String userpassword = passwordRegisterField.getText();
         String email = emailTextField.getText();
-        String ujraemail = emailUjraTextField.getText();
-        String ujrapassword = passwordUjraRegisterField.getText();
         String teljesnev = teljesnevTextField.getText();
         String szemelyigazolvany = szemelyiTextField.getText();
         String lakcimkartya = lakcimTextField.getText();

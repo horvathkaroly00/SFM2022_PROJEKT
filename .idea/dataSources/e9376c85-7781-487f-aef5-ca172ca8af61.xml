@@ -161,7 +161,7 @@
     </schema>
     <schema id="35" parent="3" name="dbo">
       <Current>1</Current>
-      <IntrospectionTimestamp>2022-04-30.12:24:28.510</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2022-05-15.12:50:40.933</IntrospectionTimestamp>
       <ObjectId>1</ObjectId>
     </schema>
     <schema id="36" parent="3" name="guest">
@@ -179,7 +179,7 @@
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1(7)</SequenceIdentity>
+      <SequenceIdentity>1(10)</SequenceIdentity>
     </column>
     <column id="40" parent="38" name="username">
       <DataType>varchar(255 char)|0s</DataType>
