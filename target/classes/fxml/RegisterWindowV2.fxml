@@ -100,11 +100,11 @@
                </image>
             </ImageView>
             <Label text="Label" />
-            <Label fx:id="usernameErrorLabel1" layoutX="469.0" layoutY="200.0" prefHeight="32.0" prefWidth="120.0" text="Ez a felhasználónév &#10;már létezik!" />
-            <Label fx:id="emailErrorLabel1" layoutX="469.0" layoutY="246.0" prefHeight="32.0" prefWidth="120.0" text="Ez a felhasználónév &#10;már létezik!" />
-            <Label fx:id="passwordErrorLabel1" layoutX="469.0" layoutY="292.0" prefHeight="32.0" prefWidth="120.0" text="Ez a felhasználónév &#10;már létezik!" />
-            <Label fx:id="passwordujraErrorLabel1" layoutX="469.0" layoutY="338.0" prefHeight="32.0" prefWidth="120.0" text="Ez a felhasználónév &#10;már létezik!" />
-            <Label fx:id="usernameErrorLabel11" layoutX="469.0" layoutY="384.0" prefHeight="32.0" prefWidth="120.0" text="Ez a felhasználónév &#10;már létezik!" />
+            <Label fx:id="fullnameErrorLabel" layoutX="469.0" layoutY="200.0" prefHeight="32.0" prefWidth="120.0" />
+            <Label fx:id="birthdateErrorLabel" layoutX="469.0" layoutY="246.0" prefHeight="32.0" prefWidth="120.0" />
+            <Label fx:id="szemelyiErrorLabel" layoutX="469.0" layoutY="292.0" prefHeight="32.0" prefWidth="120.0" />
+            <Label fx:id="lakcimkartyaErrorLabel" layoutX="469.0" layoutY="338.0" prefHeight="32.0" prefWidth="120.0" />
+            <Label fx:id="tajErrorLabel" layoutX="469.0" layoutY="384.0" prefHeight="32.0" prefWidth="120.0" />
          </children>
       </Pane>
       <Pane layoutY="45.0" prefHeight="564.0" prefWidth="590.0" style="-fx-background-color: #ffe4b5;">
@@ -128,12 +128,12 @@
             </ImageView>
             <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="428.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/pass.png" />
+                  <Image url="@../images/password_26px.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="428.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/pass.png" />
+                  <Image url="@../images/password_26px.png" />
                </image>
             </ImageView>
             <TextField fx:id="usernameRegisterField" layoutX="155.0" layoutY="200.0" prefHeight="37.0" prefWidth="270.0" promptText="Felhasználónév" />
@@ -150,10 +150,10 @@
                   <Image url="@../images/kdr.png" />
                </image>
             </ImageView>
-            <Label fx:id="usernameErrorLabel" layoutX="469.0" layoutY="203.0" prefHeight="32.0" prefWidth="120.0" text="Ez a felhasználónév &#10;már létezik!" />
-            <Label fx:id="emailErrorLabel" layoutX="469.0" layoutY="246.0" prefHeight="32.0" prefWidth="120.0" text="Ez a felhasználónév &#10;már létezik!" />
-            <Label fx:id="passwordErrorLabel" layoutX="469.0" layoutY="293.0" prefHeight="32.0" prefWidth="120.0" text="Ez a felhasználónév &#10;már létezik!" />
-            <Label fx:id="passwordujraErrorLabel" layoutX="469.0" layoutY="339.0" prefHeight="32.0" prefWidth="120.0" text="Ez a felhasználónév &#10;már létezik!" />
+            <Label fx:id="usernameErrorLabel" layoutX="469.0" layoutY="203.0" prefHeight="32.0" prefWidth="120.0" />
+            <Label fx:id="emailErrorLabel" layoutX="469.0" layoutY="246.0" prefHeight="32.0" prefWidth="120.0" />
+            <Label fx:id="passwordErrorLabel" layoutX="469.0" layoutY="293.0" prefHeight="32.0" prefWidth="120.0" />
+            <Label fx:id="passwordujraErrorLabel" layoutX="469.0" layoutY="339.0" prefHeight="32.0" prefWidth="120.0" />
          </children>
       </Pane>
    </children>

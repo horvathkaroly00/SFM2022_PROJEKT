@@ -161,7 +161,7 @@
     </schema>
     <schema id="35" parent="3" name="dbo">
       <Current>1</Current>
-      <IntrospectionTimestamp>2022-05-15.12:50:40.933</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2022-05-15.15:53:37.510</IntrospectionTimestamp>
       <ObjectId>1</ObjectId>
     </schema>
     <schema id="36" parent="3" name="guest">
@@ -170,65 +170,90 @@
     <schema id="37" parent="3" name="sys">
       <ObjectId>4</ObjectId>
     </schema>
-    <table id="38" parent="35" name="users">
+    <table id="38" parent="35" name="ugyek">
+      <CreatedTimestamp>2022-05-15.15:04:05.703</CreatedTimestamp>
+      <ModifiedTimestamp>2022-05-15.15:05:47.847</ModifiedTimestamp>
+      <ObjectId>1861581670</ObjectId>
+    </table>
+    <table id="39" parent="35" name="users">
       <CreatedTimestamp>2022-04-18.17:17:40.403</CreatedTimestamp>
-      <ModifiedTimestamp>2022-04-19.11:47:10.647</ModifiedTimestamp>
+      <ModifiedTimestamp>2022-05-15.15:53:11.690</ModifiedTimestamp>
       <ObjectId>1525580473</ObjectId>
     </table>
-    <column id="39" parent="38" name="id">
+    <column id="40" parent="38" name="teljesnev">
+      <DataType>varchar(50 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="41" parent="38" name="ugy">
+      <DataType>varchar(50 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="42" parent="38" name="sorszam">
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="43" parent="38" name="idopont">
+      <DataType>nchar(10 char)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="44" parent="39" name="id">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1(10)</SequenceIdentity>
+      <SequenceIdentity>1(14)</SequenceIdentity>
     </column>
-    <column id="40" parent="38" name="username">
+    <column id="45" parent="39" name="username">
       <DataType>varchar(255 char)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="41" parent="38" name="userpassword">
+    <column id="46" parent="39" name="email">
       <DataType>varchar(255 char)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="42" parent="38" name="email">
+    <column id="47" parent="39" name="userpassword">
       <DataType>varchar(255 char)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="43" parent="38" name="teljesnev">
+    <column id="48" parent="39" name="teljesnev">
       <DataType>varchar(255 char)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="44" parent="38" name="szuldatum">
+    <column id="49" parent="39" name="szuldatum">
       <DataType>varchar(255 char)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="45" parent="38" name="szemelyigazolvany">
+    <column id="50" parent="39" name="szemelyigazolvany">
       <DataType>varchar(255 char)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
-    <column id="46" parent="38" name="lakcimkartya">
+    <column id="51" parent="39" name="lakcimkartya">
       <DataType>varchar(255 char)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
-    <column id="47" parent="38" name="tajkartya">
+    <column id="52" parent="39" name="tajkartya">
       <DataType>varchar(255 char)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>11</Position>
     </column>
-    <index id="48" parent="38" name="PK__users__3213E83FF3027FC8">
+    <index id="53" parent="39" name="PK__users__3213E83FF3027FC8">
       <Clustering>1</Clustering>
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="49" parent="38" name="PK__users__3213E83FF3027FC8">
+    <key id="54" parent="39" name="PK__users__3213E83FF3027FC8">
       <ColNames>id</ColNames>
       <CreatedTimestamp>2022-04-18.17:17:40.407</CreatedTimestamp>
       <ModifiedTimestamp>2022-04-18.17:17:40.407</ModifiedTimestamp>
