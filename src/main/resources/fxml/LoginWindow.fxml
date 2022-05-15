@@ -29,7 +29,7 @@
       </ImageView>
       <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="436.0" layoutY="323.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/pass.png" />
+            <Image url="@../images/password_26px.png" />
          </image>
       </ImageView>
       <Pane fx:id="titlePane" prefHeight="45.0" prefWidth="580.0" style="-fx-background-color: #DEC69E;">

@@ -1,6 +1,7 @@
 package hu.unideb.inf;
 
 import com.sun.scenario.effect.Blend;
+import com.sun.source.tree.WhileLoopTree;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -21,13 +22,16 @@ import javafx.stage.Window;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Random;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-
+import static hu.unideb.inf.Database.printSQLException;
 
 
 public class GuiController implements Initializable {
@@ -37,6 +41,9 @@ public class GuiController implements Initializable {
 
     private Stage stage;
     private Scene scene;
+
+    public GuiController() {
+    }
 
     public void switchToRegisterWindow(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/RegisterWindowV2.fxml"));
@@ -471,7 +478,25 @@ public class GuiController implements Initializable {
         alert.show();
     }
 
+    ObservableList<ModelTable> listElements() {
+        ObservableList<ModelTable> elements = FXCollections.observableArrayList();
 
+        try {
+            Connection con = Database.getConnection();
+            ResultSet rs = con.createStatement().executeQuery("select * from ugyek");
+
+            while(rs.next()){
+                elements.add(new ModelTable(rs.getString("teljesnev"), rs.getString("ugy"),rs.getString("sorszam"),rs.getString("idopont")));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(GuiController.class.getName()).log(Level.SEVERE,null,ex);
+        }
+
+
+        return elements;
+    }
+    @FXML
+    private TableView<ModelTable> table;
     @FXML
     private Label profilUsernameLabel, profilEmailLabel, profilPasswordLabel, profilFullnameLabel, profilSzuldatumLabel, profilSzemelyiLabel,
             profilLakcimLabel, profilTajLabel;
@@ -480,8 +505,11 @@ public class GuiController implements Initializable {
     @FXML
     private  Button btn_profil;
     public void sajatProfil(ActionEvent event) throws SQLException {
+
+      table.setItems(listElements());
         if (event.getSource() == btn_profil)
         {
+
             profilUsernameLabel.setText(globalusername);
             pnl_profil.toFront();
 
@@ -489,8 +517,7 @@ public class GuiController implements Initializable {
 
     }
 
-    @FXML
-    private TableView<ModelTable> table;
+
     @FXML
     private TableColumn<ModelTable, String> col_idopont;
     @FXML
@@ -500,16 +527,19 @@ public class GuiController implements Initializable {
     @FXML
     private TableColumn<ModelTable, String> col_ugy;
 
-    ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
+
 
     @Override
     public void initialize (URL url, ResourceBundle resourceBundle){
 
-        Connection con = Database.getConnection();
-        col_teljesnev.setCellValueFactory(new PropertyValueFactory<>("teljesnev"));
+        /*col_teljesnev.setCellValueFactory(new PropertyValueFactory<>("teljesnev"));
         col_ugy.setCellValueFactory(new PropertyValueFactory<>("ugy"));
         col_sorszam.setCellValueFactory(new PropertyValueFactory<>("sorszam"));
         col_idopont.setCellValueFactory(new PropertyValueFactory<>("idopont"));
+        table.setItems(listElements());
+
+         */
+
 
     }
 }

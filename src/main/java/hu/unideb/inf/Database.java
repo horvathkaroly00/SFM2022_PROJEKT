@@ -23,6 +23,10 @@ public class Database  {
 
     public static Connection getConnection() throws SQLException {
 
+        Connection connection = DriverManager.getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
+
+        return connection;
+
     }
 
     public boolean validate(String username, String userpassword) throws SQLException {
