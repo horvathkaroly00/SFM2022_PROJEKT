@@ -285,6 +285,7 @@ public class GuiController implements Initializable {
     //register
     @FXML
     private Label birthdateErrorLabel, emailErrorLabel, fullnameErrorLabel, lakcimkartyaErrorLabel, passwordErrorLabel,  passwordujraErrorLabel;
+    @FXML
     private Label szemelyiErrorLabel, tajErrorLabel, usernameErrorLabel;
     @FXML
     private TextField usernameRegisterField, teljesnevTextField, szemelyiTextField, lakcimTextField, szuldatumTextField, emailTextField, tajTextField,emailUjraTextField;
@@ -293,9 +294,34 @@ public class GuiController implements Initializable {
     @FXML
     public void register(ActionEvent event) throws SQLException {
 
+        if(!(passwordRegisterField.getText().equals(passwordUjraRegisterField.getText()))){
+            passwordujraErrorLabel.setText("Nem egyezik a két jelszó!");
+        }else {
+            passwordujraErrorLabel.setText("");
+        }
+
+        boolean usernameValidation = DataValidation.usernameFormat(usernameRegisterField, usernameErrorLabel, "Helytelen felhasználónév formátum.Kérem adjon meg minimum 6 karakterből, számokból, és betőkből álló felhasználónevet.");
+        boolean emailValidation = DataValidation.emailFormat(emailTextField, emailErrorLabel, "Helytelen email formátum. Helyes e-mail címre egy példa: ricsi722@gmail.com");
+        boolean passwordValidation = DataValidation.passwordFormat(passwordRegisterField, passwordErrorLabel, "Helytelen jelszó formátum. Tartalmazzon minimum egy kis és nagy betűt,számot,minimum 8 karakter hosszú legyen.");
+        boolean fullnameValidation = DataValidation.fullnameFormat(teljesnevTextField,fullnameErrorLabel,"Kérem adja meg a nevét!");
+        boolean birthdateValidation = DataValidation.birthdateFormat(szuldatumTextField,birthdateErrorLabel,"Kérem kötőjellel elválasztva adja meg születési dátumát!");
+        boolean idcardValidation = DataValidation.idcardFormat(szemelyiTextField,szemelyiErrorLabel,"Kérem ehhez hasonló módon adja meg személyi igazolvány számát:123456AS");
+        boolean addresscardValidation = DataValidation.addresscardFormat(lakcimTextField,lakcimkartyaErrorLabel,"Kérem ehhez hasonló módon adja meg lakcím kártyájának  számát:123456AS");
+        boolean tajcardValidation = DataValidation.tajcardFormat(tajTextField,tajErrorLabel,"Kérem ehhez hasonló módon adja meg TAJ-számát:123456789");
+/*
+        boolean username = DataValidation.textFieldIsNull(usernameRegisterField,usernameErrorLabel, "zID is Required");
+        boolean email = DataValidation.textFieldIsNull(emailTextField, emailErrorLabel, "Name is Required");
+        boolean password = DataValidation.textFieldIsNull(passwordRegisterField,passwordErrorLabel, "Phone Number is Required");
+        boolean passwordagain = DataValidation.textFieldIsNull(passwordUjraRegisterField,passwordujraErrorLabel, "Email is Required");
+        boolean fullname = DataValidation.textFieldIsNull(teljesnevTextField,fullnameErrorLabel, "Course Code is Required");
+        boolean birthdate = DataValidation.textFieldIsNull(szuldatumTextField,birthdateErrorLabel, "Course Code is Required");
+        boolean idcard = DataValidation.textFieldIsNull(szemelyiTextField,szemelyiErrorLabel, "Course Code is Required");
+        boolean addresscard = DataValidation.textFieldIsNull(lakcimTextField,lakcimkartyaErrorLabel, "Course Code is Required");
+        boolean tajcard = DataValidation.textFieldIsNull(tajTextField,tajErrorLabel, "Course Code is Required");
+*/
         Window owner = btn_veglegesit.getScene().getWindow();
 
-        if (usernameRegisterField.getText().isEmpty()) {
+        /*if (usernameRegisterField.getText().isEmpty()) {
             showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
                     "id hianyzik");
             return;
@@ -344,7 +370,7 @@ public class GuiController implements Initializable {
             showAlert(Alert.AlertType.ERROR, owner, "Form Error!",
                     "taj hianyzik");
             return;
-        }
+        }*/
 
         String username = usernameRegisterField.getText();
         String userpassword = passwordRegisterField.getText();
