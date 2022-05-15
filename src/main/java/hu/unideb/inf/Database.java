@@ -1,6 +1,9 @@
 
 package hu.unideb.inf;
 
+import javafx.application.Application;
+
+import java.awt.desktop.AppEvent;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -8,7 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 
-public class Database {
+public class Database  {
 
     // Replace below database url, username and password with your actual database credentials
     private static final String DATABASE_URL = "jdbc:sqlserver://sfmadatbazis.database.windows.net:1433;database=sfmadatbazis";
@@ -17,6 +20,10 @@ public class Database {
     private static final String SELECT_QUERY = "SELECT * FROM users WHERE username = ? and userpassword = ?";
     private static final String INSERT_QUERY = "INSERT INTO users (username,email,userpassword,teljesnev,szuldatum,szemelyigazolvany,lakcimkartya,tajkartya ) VALUES (?, ?, ?, ?, ?,?, ?, ?)";
     private static final String INSERT_QUERY_UGYEK = "INSERT INTO ugyek (teljesnev, ugy, sorszam, idopont) VALUES (?, ?, ?, ?)";
+
+    public static Connection getConnection() throws SQLException {
+
+    }
 
     public boolean validate(String username, String userpassword) throws SQLException {
 

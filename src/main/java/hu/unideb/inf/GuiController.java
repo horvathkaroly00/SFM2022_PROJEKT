@@ -1,5 +1,8 @@
 package hu.unideb.inf;
 
+import com.sun.scenario.effect.Blend;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +11,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
@@ -16,6 +20,7 @@ import javafx.stage.Window;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -484,8 +489,27 @@ public class GuiController implements Initializable {
 
     }
 
+    @FXML
+    private TableView<ModelTable> table;
+    @FXML
+    private TableColumn<ModelTable, String> col_idopont;
+    @FXML
+    private TableColumn<ModelTable, String> col_sorszam;
+    @FXML
+    private TableColumn<ModelTable, String> col_teljesnev;
+    @FXML
+    private TableColumn<ModelTable, String> col_ugy;
+
+    ObservableList<ModelTable> oblist = FXCollections.observableArrayList();
+
     @Override
     public void initialize (URL url, ResourceBundle resourceBundle){
+
+        Connection con = Database.getConnection();
+        col_teljesnev.setCellValueFactory(new PropertyValueFactory<>("teljesnev"));
+        col_ugy.setCellValueFactory(new PropertyValueFactory<>("ugy"));
+        col_sorszam.setCellValueFactory(new PropertyValueFactory<>("sorszam"));
+        col_idopont.setCellValueFactory(new PropertyValueFactory<>("idopont"));
 
     }
 }
