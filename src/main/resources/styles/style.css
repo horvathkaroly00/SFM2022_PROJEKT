@@ -40,6 +40,13 @@
     -fx-font-color: #AAAAA7;
 }
 
+.errorLabel {
+	-fx-font-family: Bebas Neue , cursive;
+	-fx-font-size: 12px;
+	-fx-font-weight: bold;
+	-fx-font-color: #833936;
+}
+
 .ugybutton {
 	-fx-box-shadow:inset 0px 1px 9px -4px #91b8b3;
 	-fx-background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);

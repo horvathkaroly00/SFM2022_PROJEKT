@@ -12,6 +12,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="580.0" styleClass="ancsorpane" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.GuiController">
    <children>
+      <Label fx:id="loginInfoLabel" layoutX="157.0" layoutY="371.0" prefHeight="17.0" prefWidth="270.0" styleClass="errorLabel" textFill="#f20101" />
       <Label layoutX="30.0" layoutY="281.0" styleClass="infoLabel" text="Felhasználónév" />
       <Label layoutX="30.0" layoutY="333.0" styleClass="infoLabel" text="Jelszó" />
       <Label layoutX="158.0" layoutY="144.0" styleClass="bigLabel" text="ÜDVÖZÖLJÜK" textAlignment="CENTER">
@@ -73,6 +74,5 @@
          </image>
       </ImageView>
       <Button layoutX="301.0" layoutY="399.0" mnemonicParsing="false" onAction="#switchToRegisterWindow" styleClass="logreg" stylesheets="@../styles/style.css" text="Regisztráció" />
-      <Label fx:id="loginInfoLabel" layoutX="164.0" layoutY="370.0" prefHeight="17.0" prefWidth="255.0" />
    </children>
 </AnchorPane>
