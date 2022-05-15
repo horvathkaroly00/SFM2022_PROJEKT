@@ -27,8 +27,6 @@
             <artifactId>javafx-fxml</artifactId>
             <version>11</version>
         </dependency>
-<<<<<<< Updated upstream
-=======
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>mssql-jdbc</artifactId>
@@ -41,7 +39,6 @@
             <scope>test</scope>
         </dependency>
 
->>>>>>> Stashed changes
     </dependencies>
     <build>
         <plugins>

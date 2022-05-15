@@ -4,10 +4,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DataValidationTest {
+public class DataValidationTest {
 
     @Test
-    void usernameFormat() {
+    void usernameFormatcorrect() {
+        var user = new DataValidationTest();
+
     }
 
     @Test
