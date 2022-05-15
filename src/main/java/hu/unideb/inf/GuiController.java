@@ -111,11 +111,9 @@ public class GuiController implements Initializable {
     @FXML
     private void handleButtonAction(ActionEvent event)
     {
-<<<<<<< Updated upstream
         if (event.getSource() == btn_okt)
         {
             pnl_okt.toFront();
-=======
         Random rand = new Random();
         int n = rand.nextInt(50);
         n += 1;
@@ -338,7 +336,6 @@ public class GuiController implements Initializable {
 
         showAlert(Alert.AlertType.CONFIRMATION, owner, "sikeres",
                 "Welcome " + usernameRegisterField.getText());
->>>>>>> Stashed changes
     }
 
 

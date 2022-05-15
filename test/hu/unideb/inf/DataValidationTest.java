@@ -1,15 +1,16 @@
 package hu.unideb.inf;
 
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 public class DataValidationTest {
 
     @Test
-    void usernameFormatcorrect() {
-        var user = new DataValidationTest();
-
+    public void usernameFormatCorrect() {
+        var user = new DataValidation();
+        Assertions.assertEquals(true, user.usernameFormat());
     }
 
     @Test
