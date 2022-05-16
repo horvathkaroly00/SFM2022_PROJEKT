@@ -51,7 +51,7 @@ public class DataValidation {
         boolean isNumeric = true;
         String validationString = null;
 
-        if (!inputTextField.getText().matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}$")) {
+        if (!inputTextField.getText().matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{7,}$")) {
             isNumeric = false;
             validationString = validationText;
 

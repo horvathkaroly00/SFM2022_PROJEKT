@@ -1,31 +1,42 @@
 
 package hu.unideb.inf;
 
-import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
-import java.awt.desktop.AppEvent;
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDateTime;
 
 public class Database  {
 
-    // Replace below database url, username and password with your actual database credentials
+
     private static final String DATABASE_URL = "jdbc:sqlserver://sfmadatbazis.database.windows.net:1433;database=sfmadatbazis";
     private static final String DATABASE_USERNAME = "Kdr123";
     private static final String DATABASE_PASSWORD = "Kdrteam123";
     private static final String SELECT_QUERY = "SELECT * FROM users WHERE username = ? and userpassword = ?";
-    private static final String INSERT_QUERY = "INSERT INTO users (username,email,userpassword,teljesnev,szuldatum,szemelyigazolvany,lakcimkartya,tajkartya ) VALUES (?, ?, ?, ?, ?,?, ?, ?)";
+    private static final String INSERT_QUERY = "INSERT INTO users (username,email,userpassword,teljesnev,szuldatum,szemelyigazolvany,lakcimkartya,tajkartya ) " +
+            "VALUES (?, ?, ?, ?, ?,?, ?, ?)";
     private static final String INSERT_QUERY_UGYEK = "INSERT INTO ugyek (teljesnev, ugy, sorszam, idopont) VALUES (?, ?, ?, ?)";
 
-    public static Connection getConnection() throws SQLException {
 
-        Connection connection = DriverManager.getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
+    public static Connection getConnection(){
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection(DATABASE_URL);
+            JOptionPane.showMessageDialog(null, "Sikeres");
+            return conn;
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,e);
+            return null;
+        }
 
-        return connection;
+        //Connection connection = DriverManager.getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
+
+        //return connection;
 
     }
 
@@ -57,7 +68,8 @@ public class Database  {
         return false;
     }
 
-    public void insertRecord(String username, String userpassword, String email, String teljesnev, String szuldatum, String szemelyigazolvany,String lakcimkartya,String tajkartya) throws SQLException {
+
+    public void insertRecord(String username, String email, String userpassword, String teljesnev, String szuldatum, String szemelyigazolvany,String lakcimkartya,String tajkartya) throws SQLException {
 
         // Step 1: Establishing a Connection and
         // try-with-resource statement will auto close the connection.
@@ -107,7 +119,23 @@ public class Database  {
         }
     }
 
-    
+    public static ObservableList<Cases> getDatacases()throws SQLException{
+
+        Connection connection = DriverManager.getConnection(DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD);
+        ObservableList<Cases> list = FXCollections.observableArrayList();
+        try{
+            PreparedStatement ps = connection.prepareStatement("select * from ugyek where teljesnev='"+ GuiController.globalteljesnev +"'");
+            ResultSet rs = ps.executeQuery();
+
+            while(rs.next()) {
+                list.add(new Cases(rs.getString("teljesnev"), rs.getString("ugy"),rs.getString("sorszam"),rs.getString("idopont")));
+            }
+        } catch (SQLException e){
+                printSQLException(e);
+        }
+
+        return list;
+    }
 
     public static void printSQLException(SQLException ex) {
         for (Throwable e: ex) {

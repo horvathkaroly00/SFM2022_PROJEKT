@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact name="sfm_projekt:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/sfm_projekt_jar2</output-path>
+    <root id="root">
+      <element id="archive" name="sfm_projekt.jar">
+        <element id="module-output" name="sfm_projekt" />
+      </element>
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:win:11" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:11" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:win:11" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:11" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:11" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:11" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:win:11" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:win:11" />
+      <element id="library" level="project" name="Maven: com.microsoft.sqlserver:mssql-jdbc:10.2.0.jre11" />
+    </root>
+  </artifact>
+</component>

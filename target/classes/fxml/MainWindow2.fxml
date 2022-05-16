@@ -3,6 +3,9 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -20,23 +23,92 @@
          <children>
             <Pane fx:id="pnl_profil" prefHeight="200.0" prefWidth="200.0" styleClass="pane">
                <children>
-                  <Label fx:id="profilLakcimLabel" layoutX="209.0" layoutY="280.0" prefHeight="17.0" prefWidth="169.0" text="asd" />
-                  <Label fx:id="profilSzemelyiLabel" layoutX="209.0" layoutY="250.0" prefHeight="17.0" prefWidth="233.0" text="asd" />
-                  <Label fx:id="profilSzuldatumLabel" layoutX="209.0" layoutY="220.0" prefHeight="17.0" prefWidth="194.0" text="asd" />
-                  <Label fx:id="profilFullnameLabel" layoutX="209.0" layoutY="190.0" prefHeight="17.0" prefWidth="213.0" text="asd" />
-                  <Label fx:id="profilPasswordLabel" layoutX="209.0" layoutY="160.0" prefHeight="17.0" prefWidth="194.0" text="asd" />
-                  <Label fx:id="profilEmailLabel" layoutX="209.0" layoutY="130.0" prefHeight="17.0" prefWidth="179.0" text="asd" />
-                  <Label fx:id="profilUsernameLabel" layoutX="209.0" layoutY="100.0" prefHeight="17.0" prefWidth="169.0" text="asd" />
-                  <Label layoutX="145.0" layoutY="23.0" prefHeight="17.0" prefWidth="262.0" text="Saját adatok" />
-                  <Label layoutX="68.0" layoutY="100.0" prefHeight="17.0" prefWidth="103.0" text="Felhasználónév:" />
-                  <Label layoutX="68.0" layoutY="130.0" prefHeight="17.0" prefWidth="77.0" text="Email:" />
-                  <Label layoutX="68.0" layoutY="160.0" prefHeight="17.0" prefWidth="77.0" text="Jelszó:" />
-                  <Label layoutX="68.0" layoutY="190.0" prefHeight="17.0" prefWidth="77.0" text="Teljes név:" />
-                  <Label layoutX="68.0" layoutY="220.0" prefHeight="17.0" prefWidth="77.0" text="Szuldatum:" />
-                  <Label layoutX="68.0" layoutY="250.0" prefHeight="17.0" prefWidth="77.0" text="Szemelyi:" />
-                  <Label layoutX="68.0" layoutY="280.0" prefHeight="17.0" prefWidth="77.0" text="Lakcimkartya:" />
-                  <Label layoutX="68.0" layoutY="309.0" prefHeight="17.0" prefWidth="77.0" text="Tajkartya:" />
-                  <Label fx:id="profilTajLabel" layoutX="209.0" layoutY="309.0" prefHeight="17.0" prefWidth="213.0" text="asd" />
+                  <Label layoutX="571.0" prefHeight="37.0" prefWidth="331.0" styleClass="bigLabel" text="ELŐZŐ ÜGYEIM" />
+                  <TableView fx:id="table" layoutX="486.0" layoutY="56.0" prefHeight="414.0" prefWidth="500.0">
+                     <columns>
+                        <TableColumn fx:id="col_teljesnev" prefWidth="125.0" text="Teljes név" />
+                        <TableColumn fx:id="col_ugy" prefWidth="125.0" text="Ügy" />
+                        <TableColumn fx:id="col_sorszam" prefWidth="100.0" text="Sorszám" />
+                        <TableColumn fx:id="col_idopont" prefWidth="147.0" text="Időpont" />
+                     </columns>
+                  </TableView>
+                  <GridPane layoutX="7.0" layoutY="64.0" prefHeight="414.0" prefWidth="496.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="BASELINE_LEFT" prefHeight="17.0" prefWidth="101.0" styleClass="infoLabel" text="Felhasználónév:" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="BASELINE_LEFT" prefHeight="17.0" prefWidth="77.0" styleClass="infoLabel" text="Email:" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="BASELINE_LEFT" prefHeight="17.0" prefWidth="77.0" styleClass="infoLabel" text="Jelszó:" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="BASELINE_LEFT" prefHeight="17.0" prefWidth="77.0" styleClass="infoLabel" text="Teljes név:" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="BASELINE_LEFT" prefHeight="17.0" prefWidth="100.0" styleClass="infoLabel" text="Születési dátum:" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="BASELINE_LEFT" prefHeight="17.0" prefWidth="124.0" styleClass="infoLabel" text="Személyigazolvány:" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="BASELINE_LEFT" prefHeight="17.0" prefWidth="109.0" styleClass="infoLabel" text="Lakcímkártya:" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label alignment="BASELINE_LEFT" prefHeight="17.0" prefWidth="77.0" styleClass="infoLabel" text="Tajkártya:" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Button fx:id="emailUpdate" mnemonicParsing="false" onAction="#updateData1" styleClass="modositbutton" text="Módosítás" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                        <Button fx:id="passwordUpdate" mnemonicParsing="false" onAction="#updateData1" styleClass="modositbutton" text="Módosítás" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                        <Button fx:id="szemelyiUpdate" mnemonicParsing="false" onAction="#updateData1" styleClass="modositbutton" text="Módosítás" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="TOP" />
+                        <Button fx:id="lakcimUpdate" mnemonicParsing="false" onAction="#updateData1" styleClass="modositbutton" text="Módosítás" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+                        <Button fx:id="tajUpdate" mnemonicParsing="false" onAction="#updateData1" styleClass="modositbutton" text="Módosítás" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="TOP" />
+                        <TextField fx:id="profilUsernameLabel" GridPane.columnIndex="1" GridPane.valignment="TOP" />
+                        <TextField fx:id="profilEmailLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                        <TextField fx:id="profilPasswordLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+                        <TextField fx:id="profilFullnameLabel" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+                        <TextField fx:id="profilSzuldatumLabel" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.valignment="TOP" />
+                        <TextField fx:id="profilSzemelyiLabel" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="TOP" />
+                        <TextField fx:id="profilLakcimLabel" GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.valignment="TOP" />
+                        <TextField fx:id="profilTajLabel" GridPane.columnIndex="1" GridPane.rowIndex="7" GridPane.valignment="TOP" />
+                        <Label fx:id="profilErrorLabel1" prefHeight="20.0" prefWidth="200.0" styleClass="errorLabel" textFill="#f80505" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+                        <Label fx:id="profilErrorLabel" prefHeight="20.0" prefWidth="200.0" styleClass="errorLabel" textFill="#f80505" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                        <Label fx:id="profilErrorLabel2" prefHeight="20.0" prefWidth="200.0" styleClass="errorLabel" textFill="#f80505" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="BOTTOM" />
+                        <Label fx:id="profilErrorLabel3" prefHeight="20.0" prefWidth="200.0" styleClass="errorLabel" textFill="#f80505" GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.valignment="BOTTOM" />
+                        <Label fx:id="profilErrorLabel4" prefHeight="20.0" prefWidth="200.0" styleClass="errorLabel" textFill="#f80505" GridPane.columnIndex="1" GridPane.rowIndex="7" GridPane.valignment="BOTTOM" />
+                     </children>
+                  </GridPane>
                </children>
             </Pane>
             <GridPane fx:id="pnl_pult" prefHeight="483.0" prefWidth="353.0" styleClass="pane">
@@ -234,7 +306,7 @@
       </AnchorPane>
       <HBox alignment="CENTER" layoutX="244.0" layoutY="41.0" prefHeight="139.0" prefWidth="1000.0" style="-fx-background-color: #FFE4B5;">
          <children>
-            <Label fx:id="hboxLabel" alignment="CENTER" prefHeight="54.0" prefWidth="292.0" styleClass="bigLabel" text="ÜGYTÍPUSOK">
+            <Label fx:id="hboxLabel" alignment="CENTER" prefHeight="58.0" prefWidth="515.0" styleClass="bigLabel" text="ÜGYTÍPUSOK">
                <font>
                   <Font name="System Bold Italic" size="30.0" />
                </font>
@@ -246,12 +318,12 @@
       </HBox>
       <HBox layoutY="687.0" prefHeight="36.0" prefWidth="1280.0" style="-fx-background-color: #DEC69E;">
          <children>
-            <Label alignment="CENTER" prefHeight="14.0" prefWidth="63.0" text="Verzió 0.0.2">
+            <Label alignment="CENTER" prefHeight="14.0" prefWidth="63.0" styleClass="infoLabel" text="VERZIÓ 1.0">
                <HBox.margin>
                   <Insets left="70.0" top="10.0" />
                </HBox.margin>
             </Label>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="261.0" text="© 2022 - 2022 KDR Team - All Rights Reserved.">
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="296.0" styleClass="infoLabel" text="© 2022 - 2022 KDR Team - All Rights Reserved.">
                <HBox.margin>
                   <Insets left="800.0" top="10.0" />
                </HBox.margin>
