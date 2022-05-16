@@ -1,7 +1,7 @@
 # SFM2022_PROJEKT
 Okmányirodai alkalmazás
 
-Célja: Személyes adatok megadása után a választott ügyben sorszámot adjon, majd a sorszám alapján hívjon embereket a képzeletbeli pultokhoz.
+Célja: Személyes adatok megadása után a választott ügyben sorszámot adjon, és eltárolja ezeket.
 
 Készítők: Horváth Károly
           Ilyés Dávid
